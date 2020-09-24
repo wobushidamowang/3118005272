@@ -16,7 +16,7 @@ public class Paper {
         try {
             reader = new BufferedReader(new FileReader(pathname));
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            throw new RuntimeException("找不到文件",e);
         }
 
         this.list = new ArrayList<>();

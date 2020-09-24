@@ -23,17 +23,27 @@ public class Similarity {
 
     /**
      * 得出两篇文章的相似度
-     * @param less
-     * @param more
+     * @param paper1
+     * @param paper2
      * @return
      */
-    public static Double getSimilarity(Paper less, Paper more){
+    public static Double getSimilarity(Paper paper1, Paper paper2){
+        //较短的文章比较较长的文章
+        Paper less;
+        Paper more;
+        if(paper1.getLines()<paper2.getLines()){
+            less = paper1;
+            more = paper2;
+        } else {
+            less = paper2;
+            more = paper1;
+        }
         Double[] ds = new Double[less.getLines()];
         for (int i = 0; i < less.getLines(); i++) {
 
             double similarity;
             double maxSim = 0.0;
-
+            //在50行范围内比较
             for (int k = 0; k < 50; k++){
                 similarity = getSimilarity(less.getList().get(i),more.getList().get(i+k));
                 if (similarity>maxSim) maxSim = similarity;
