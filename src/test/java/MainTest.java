@@ -35,12 +35,12 @@ public class MainTest {
         Paper p2 = new Paper("D:\\developer\\compare\\src\\test\\txt\\orig_0.8_dis_15.txt");
         System.out.println(Similarity.getSimilarity(p1, p2));
     }
-    @Test
-    public void test6() throws IOException {
-        Paper p1 = new Paper("D:\\developer\\compare\\src\\test\\txt\\jjjjjjjjjjj.txt");
-        Paper p2 = new Paper("D:\\developer\\compare\\src\\test\\txt\\orig_0.8_dis_15.txt");
-        System.out.println(Similarity.getSimilarity(p1, p2));
-    }
+//    @Test
+//    public void test6() throws IOException {
+//        Paper p1 = new Paper("D:\\developer\\compare\\src\\test\\txt\\jjjjjjjjjjj.txt");
+//        Paper p2 = new Paper("D:\\developer\\compare\\src\\test\\txt\\orig_0.8_dis_15.txt");
+//        System.out.println(Similarity.getSimilarity(p1, p2));
+//    }
     @Test
     public void test7() throws IOException {
         Paper p1 = new Paper("D:\\developer\\compare\\src\\test\\txt\\1.txt");
